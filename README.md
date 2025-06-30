@@ -7,8 +7,10 @@
   - postioning
   - flexbox
   - fonts
-# Project :
-    - Login page using Flexbox
-    - weather app
+
+   
+## Project :
+  - Login page using Flexbox
+  - weather app
 
 
