@@ -1,5 +1,5 @@
 {
-  "name": "next-auth",
+  "name": "intro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,15 +10,11 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.3",
-    "axios": "^1.10.0",
     "bcryptjs": "^3.0.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.16.1",
     "next": "15.3.5",
-    "nodemailer": "^7.0.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hot-toast": "^2.5.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

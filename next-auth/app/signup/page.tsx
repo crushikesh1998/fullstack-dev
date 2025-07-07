@@ -1,15 +1,17 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 export default function signupPage(){
-    const [user , setUser] = React.useState({
+    const [user , setUser] = useState({
         email:'',
         username: '',
         password:'',
     })
-    const signup = async () =>{}
+    const signup = async () =>{
+
+    }
     return(
         <div className="min-h-screen py-2 flex flex-col items-center justify-center bg-black ">
             <section className="h-9/12 w-1/3 bg-amber-100 py-6 px-5 rounded ">
@@ -18,7 +20,7 @@ export default function signupPage(){
                     <input type="email" placeholder="Email" className="p-2 rounded" value={user.email} onChange={(e) => setUser({...user, email: e.target.value})} />
                     <input type="text" placeholder="Username" className="p-2 rounded" value={user.username} onChange={(e) => setUser({...user, username: e.target.value})} />
                     <input type="password" placeholder="Password" className="p-2 rounded" value={user.password} onChange={(e) => setUser({...user, password: e.target.value})} />
-                    <button type="submit" className="bg-blue-500 text-white p-2 rounded">Signup</button>
+                    <button type="submit" className="bg-blue-500 text-white p-2 rounded cursor-pointer">Signup</button>
                 </form>
             </section>
         </div>
