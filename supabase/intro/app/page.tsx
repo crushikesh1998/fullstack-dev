@@ -17,13 +17,12 @@ const[newTask,setNewTask] =useState({
   // State to hold the list of tasks
 const[tasks,setTasks] = useState<Task[]>([]);
 const[newDescription,setNewDescription] =useState("")
-  // Fetch tasks from the database when the component mounts
-  const fetchTasks = async () => {
-    const { data, error } = await supabase
-      .from("task")
-      .select("*")
-      .order("created_at", { ascending: true });
 
+// Fetch tasks from the database when the component mounts
+const fetchTasks = async () => {
+    const { data, error } = await supabase.from("task").select("*").order("created_at", { ascending: true });
+    
+    
     if (error) {
       console.error("Error fetching tasks:", error);
     } else {
@@ -37,7 +36,7 @@ const[newDescription,setNewDescription] =useState("")
     const {error } =await supabase.from("task").delete().eq("id",id)
 
     if (error){
-      console.log("Error deleting task : ",error.message);
+      console.log("Error deleting task :",error.message);
       return;
     }
   }
